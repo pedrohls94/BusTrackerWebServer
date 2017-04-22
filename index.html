@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Bus Tracker Web Server</title>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  </head>
+  <body background="img/bg.png">
+    <script src="js/index.js" type="text/javascript"></script>
+
+    <div id="form" class="simple small">
+      <img src="img/electricbus.jpg" width="200px" Height="100px"/>
+      <br/>
+
+      <ul class="tab">
+        <li><a href="#" id="defaultOpen" class="tablinks" onclick="changeTab(event, 'New')">New</a></li>
+        <li><a href="#" class="tablinks" onclick="changeTab(event, 'Search')">Search</a></li>
+      </ul>
+
+      <div id="New" class="tabcontent">
+        <form >
+          <fieldset style="border:none">
+            <input type="text" placeholder="Name" name="name" id="name" class="text ui-widget-content ui-corner-all">
+            <br/>
+            <button type="button" name="submit" id="submit" value="Submit" onclick="createLine()">Submit</button>
+          </fieldset>
+        </form>
+      </div>
+
+      <div id="Search" class="tabcontent">
+        <form >
+          <fieldset style="border:none">
+            <button type="button" name="submit" id="submit" value="Submit" onclick="fetchAllLines()">Check Lines</button>
+            <br/>
+            <input type="text" placeholder="Id" name="id" id="id" class="text ui-widget-content ui-corner-all">
+            <br/>
+            <button type="button" name="submit" id="submit" value="Submit" onclick="searchLine()">Submit</button>
+          </fieldset>
+        </form>
+      </div>
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,4 @@
+DROP TABLE Line;
+DROP TABLE Stop;
+DROP TABLE Bus;
+DROP TABLE LineStop;

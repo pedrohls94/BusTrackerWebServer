@@ -1,0 +1,98 @@
+html, body { height: 100%; margin: 0; padding: 0; }
+html { margin: auto; display: table; }
+body {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: Roboto, sans-serif;
+  color: #444;
+}
+div.simple {
+  position: relative;
+  top: -10%;
+  width: calc(90% - 3em);
+  background-color: #fff;
+  margin: auto;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.4);
+  border-radius: 0.25em;
+  padding: 1.5em;
+  text-align: center;
+}
+
+div.small {
+  width: 14em;
+}
+
+input.text {
+  position: relative;
+  width: calc(100% - 2.2em);
+  border: 0.2em solid #888;
+  padding: 0 0.5em 0 0.5em;
+  margin: 0.5em;
+  height: 2em;
+  border-radius: 0.25em;
+  background-color: #fff;
+  font-family: Roboto, sans-serif;
+  font-size: 10.5pt;
+  z-index: 1;
+}
+
+button {
+  height: 2.25em;
+  border: 0.2em solid #bbb;
+  border-radius: 0.25em;
+  background: #f8f8f8;
+  color: #444;
+  margin: 0.5em 0.25em;
+  font-family: Roboto, sans-serif;
+  font-size: 10.5pt;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Float the list items side by side */
+ul.tab li {
+  float: left;
+  width: 50%
+}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    width: 72.5%
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #ccc;}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
