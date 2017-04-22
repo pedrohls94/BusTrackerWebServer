@@ -4,7 +4,7 @@ require 'DatabaseController.php';
 $db = new DatabaseController();
 
 if ($_GET['action'] == 'createLine' && $_GET['name'] != null) {
-    $db->createLine($_GET['name']);
+  echo json_encode($db->createLine($_GET['name']));
 }
 else if ($_GET['action'] == 'createBus') {
   $db->createBus($_GET['lineId'], $_GET['eposId']);
