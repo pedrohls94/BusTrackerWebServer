@@ -27,7 +27,7 @@ class DatabaseController {
 		$sql = 'INSERT INTO' . ' '.self::TABLE_LINE.' ';
 		$sql .= '('.self::LINE_COL_NAME.')';
 		$sql .= ' VALUES ' . '("'.$name.'");';
-		$this->processQuery($sql);
+		return $this->processQueryGetId($sql);
 	}
 
 	function createBus($lineId, $eposId) {
@@ -89,8 +89,18 @@ class DatabaseController {
         }
 
         $result = $conn->query($sql);
-        //$conn->close();
         return $result;
+    }
+
+    function processQueryGetId($sql) {
+        $conn = new mysqli(self::SERVERNAME, self::USERNAME, self::PASSWORD, self::DBNAME);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        $result = $conn->query($sql);
+        $id = mysqli_insert_id($conn);
+        $conn->close();
+        return $id;
     }
 }
 ?>
