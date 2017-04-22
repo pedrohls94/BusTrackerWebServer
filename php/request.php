@@ -19,13 +19,13 @@ else if ($_GET['action'] == 'fetchAllLines') {
   echo json_encode($db->fetchAllLines());
 }
 else if ($_GET['action'] == 'deleteBusStop') {
-  $db->deleteStop($_GET['lineId'], $_GET['location']); //TODO
+  $db->deleteStop($_GET['lineId'], $_GET['location']);
 }
 else if ($_GET['action'] == 'createBusStop') {
-  $db->createStop($_GET['lineId'], $_GET['location']); //TODO
+  $db->createStop($_GET['lineId'], $_GET['location']);
 }
 else if ($_GET['action'] == 'fetchStopsByLine') {
-  $db->fetchStopsByLine($_GET['lineId']); //TODO
+  $db->fetchStopsByLine($_GET['lineId']);
 }
 
 ?>

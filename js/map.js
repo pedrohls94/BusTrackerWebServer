@@ -73,7 +73,7 @@ function initMap() {
 
     var a = document.createElement('a');
     var bannerImage = new Image(100, 200);
-    banneImage.src = 'img/banner0.png';
+    banneImage.src = 'img/electricbus.jpg';
     banneImage.setAttribute("height", "50px");
     banneImage.setAttribute("width", "200px");
     a.appendChild(bannerImage);
